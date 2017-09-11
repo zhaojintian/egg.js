@@ -1,1 +1,1 @@
-# egg.js
+Coming soon!
