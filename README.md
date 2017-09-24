@@ -17,32 +17,7 @@
 - [腾讯云 SSL 证书申请](https://console.cloud.tencent.com/ssl)
 
 ## Nginx 反向代理
-Egg 的应用跑在 1113 端口（举例），然后 Nginx 反向代理到 443 (https) 端口， 同时 Nginx 将 80 (http) 端口转发到 443 (https) 端口。Nginx 配置：
-```
-upstream my_nodejs_upstream {
-    server 127.0.0.1:1113;
-}
-
-server {
-    listen 80;
-    server_name my_nodejs_server;
-    root /home/www/project_root;
-
-    location / {
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header Host $http_host;
-        proxy_set_header X-NginX-Proxy true;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
-        proxy_max_temp_file_size 0;
-        proxy_pass http://my_nodejs_upstream/;
-        proxy_redirect off;
-        proxy_read_timeout 240s;
-    }
-}
-```
-在宝塔新建站点，配置并开启 SSL，然后修改 Nginx 配置文件：
+Egg 的应用跑在 1113 端口（举例），然后 Nginx 反向代理到 443 (https) 端口， 同时 Nginx 将 80 (http) 端口转发到 443 (https) 端口。在宝塔新建站点，配置并开启 SSL，然后修改 Nginx 配置文件：
 ```
 upstream my_nodejs_upstream {
     server 127.0.0.1:1113;
@@ -66,3 +41,4 @@ server {
     }
 }
 ```
+[参考链接](http://imweb.io/topic/57c8cbb27f226f687b365636)
