@@ -6,3 +6,6 @@
 - [Sequelize 中文API文档](https://itbilu.com/nodejs/npm/VkYIaRPz-.html)
 - [Sequelize 和 MySQL 对照](https://segmentfault.com/a/1190000003987871#articleHeader11)
 - [docker入门指南](https://docker.rails365.net/chapters/1.html)
+
+## 资源
+- https://github.com/eggjs/awesome-egg
