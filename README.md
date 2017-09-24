@@ -14,5 +14,5 @@
 - https://github.com/eggjs/examples
 - https://eggjs.org/zh-cn/faq.html
 
-## Nginx 反向代理部署
-Egg 的应用跑在 1113 端口（举例），然后 Nginx 反向代理到 443 (https) 端口， 同时 nginx 将 80 (http) 端口转发到 443 (https) 端口。
+## Nginx 反向代理
+Egg 的应用跑在 1113 端口（举例），然后 Nginx 反向代理到 443 (https) 端口， 同时 Nginx 将 80 (http) 端口转发到 443 (https) 端口。
