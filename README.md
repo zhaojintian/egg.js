@@ -11,3 +11,4 @@
 - https://github.com/eggjs/awesome-egg
 - https://github.com/eggjs/egg-rest
 - https://github.com/eggjs/examples
+- https://eggjs.org/zh-cn/faq.html
