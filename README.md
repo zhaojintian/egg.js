@@ -9,3 +9,4 @@
 
 ## 资源
 - https://github.com/eggjs/awesome-egg
+- https://github.com/eggjs/egg-rest
