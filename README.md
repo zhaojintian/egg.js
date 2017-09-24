@@ -8,12 +8,13 @@
 - [docker入门指南](https://docker.rails365.net/chapters/1.html)
 - [nginx反向代理原理和配置讲解](http://www.cnblogs.com/anruy/p/4989161.html)
 
-## 资源
+## 一些资源
 - [awesome-egg](https://github.com/eggjs/awesome-egg)
 - [egg-rest](https://github.com/eggjs/egg-rest)
 - [Egg 案例](https://github.com/eggjs/examples)
 - [Egg 常见问题](https://eggjs.org/zh-cn/faq.html)
 - [服务器运维面板 - 宝塔](https://www.bt.cn/)
+- [腾讯云 SSL 证书申请](https://console.cloud.tencent.com/ssl)
 
 ## Nginx 反向代理
 Egg 的应用跑在 1113 端口（举例），然后 Nginx 反向代理到 443 (https) 端口， 同时 Nginx 将 80 (http) 端口转发到 443 (https) 端口。
