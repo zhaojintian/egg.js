@@ -42,3 +42,32 @@ server {
 }
 ```
 [参考链接](http://imweb.io/topic/57c8cbb27f226f687b365636)
+
+## 命令
+### 本地开发
+
+```bash
+# 开发
+$ npm run dev
+# 访问
+$ open http://localhost:7001/
+```
+
+### 部署
+
+```bash
+# 启动
+$ npm start
+# 停止
+$ npm stop
+```
+
+### 其他
+```bash
+# 代码风格检查
+$ npm run lint
+# 单元测试
+$ npm test
+# 自动检测依赖更新
+$ npm run autod
+```
