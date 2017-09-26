@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "egg": "^1.8.0",
+    "egg-rest": "^1.3.0",
     "egg-scripts": "^1.2.0"
   },
   "devDependencies": {
