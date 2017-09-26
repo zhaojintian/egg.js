@@ -71,3 +71,6 @@ $ npm test
 # 自动检测依赖更新
 $ npm run autod
 ```
+
+## 注意
+- 在基于 async function 编写应用代码时，请确保你的代码运行在 Node.js 7.6+ 的版本上。
