@@ -7,16 +7,5 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = []
 
-  // rest
-  config.rest = {
-    urlprefix: '/apis/',
-    authRequest: null,
-    authIgnores: null
-  }
-
-  config.security = {
-    ignore: '/apis/'
-  }
-
   return config
 }

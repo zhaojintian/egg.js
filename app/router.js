@@ -1,3 +1,4 @@
 module.exports = app => {
-  app.get('/', 'home.index')
+  require('./routes/articles')(app)
+  require('./routes/apis/articles')(app)
 }
