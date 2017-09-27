@@ -19,6 +19,7 @@
 - [路由](https://eggjs.org/zh-cn/basics/router.html)
 - [egg-restapi-module-tool](https://github.com/fomenyesu/egg-restapi-module-tool)
 - [JSON API 格式](http://jsonapi.org.cn/format/)
+- [REST API v3](https://developer.github.com/v3/)
 
 ## Nginx 反向代理
 Egg 的应用跑在 1113 端口（举例），然后 Nginx 反向代理到 443 (https) 端口， 同时 Nginx 将 80 (http) 端口转发到 443 (https) 端口。在宝塔新建站点，配置并开启 SSL，然后修改 Nginx 配置文件：
