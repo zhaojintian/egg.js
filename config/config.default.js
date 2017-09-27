@@ -9,13 +9,13 @@ module.exports = appInfo => {
 
   // rest
   config.rest = {
-    urlprefix: '/doc/api/',
+    urlprefix: '/apis/',
     authRequest: null,
     authIgnores: null
   }
 
   config.security = {
-    ignore: '/doc/api/'
+    ignore: '/apis/'
   }
 
   return config
