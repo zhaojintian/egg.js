@@ -1,5 +1,5 @@
-const constants = require('../../utils/constants')
+const consts = require('../../utils/consts')
 
 module.exports = app => {
-  app.resources(`${constants.API_PATH}/articles`, `${constants.API_CONTROLLER}.articles.index`)
+  app.resources(`${consts.API_PATH}/articles`, `${consts.API_CONTROLLER}.articles.index`)
 }
