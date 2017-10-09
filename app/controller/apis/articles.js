@@ -1,37 +1,32 @@
-exports.index = async function (ctx) {
-  ctx.status = 200
+module.exports = app => {
+  return class extends app.Controller {
+    constructor (ctx) {
+      super(ctx)
 
-  ctx.body = {
-    items: [{
-      id: 1,
-      title: 'jQuery'
-    }, {
-      id: 2,
-      title: 'Vue'
-    }],
-    debug: {
-      queries: ctx.request.queries
+      this.module = 'articles'
+      this.service = this.getService()
     }
-  }
-}
 
-exports.create = async function (ctx) {
-  ctx.status = 201
+    async index () {
+      this.ctx.status = 200
 
-  ctx.body = {
-    id: 1,
-    debug: {
-      data: ctx.request.body
-    }
-  }
-}
+      /*
 
-exports.update = async function (ctx) {
-  // ctx.status = 204
+      */
+      const {offset = 0, limit = 10, title = ''} = this.ctx.request.query
 
-  ctx.body = {
-    debug: {
-      data: ctx.params
+      this.ctx.body = {
+        count: await this.service.getCount({
+          offset,
+          limit,
+          where: {
+            title:{
+              ''
+            }
+          }
+        }),
+        items: await this.service.getAll()
+      }
     }
   }
 }

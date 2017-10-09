@@ -1,4 +1,4 @@
 module.exports = app => {
   require('./route/articles')(app)
-  require('./')
+  require('./route/apis/articles')(app)
 }
