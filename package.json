@@ -5,18 +5,18 @@
   "private": true,
   "dependencies": {
     "egg-scripts": "^1.2.0",
-    "node-core": "0.0.10"
+    "node-core": "0.0.18"
   },
   "devDependencies": {
     "autod": "^2.9.0",
     "autod-egg": "^1.0.0",
-    "egg-bin": "^4.3.0",
+    "egg-bin": "^4.3.3",
     "egg-ci": "^1.8.0",
-    "egg-mock": "^3.12.0",
-    "eslint": "^4.7.0",
+    "egg-mock": "^3.12.2",
+    "eslint": "^4.8.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-node": "^5.2.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "webstorm-disable-index": "^1.2.0"
