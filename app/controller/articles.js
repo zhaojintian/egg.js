@@ -8,15 +8,9 @@ module.exports = app => {
     }
 
     async index () {
-      this.ctx.body = await this.service.find({id: 2})
-      /*
-      await this.ctx.render('articles', {
-        total: data.count,
-        items: data.rows
-      }, {
-        layout: 'layout'
-      })
-      */
+      const data = await this.service.find({id: 2})
+
+      await this.ctx.render('articles', this.$(data), {layout: 'layout'})
     }
   }
 }

@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "egg-scripts": "^1.2.0",
-    "node-core": "0.0.18"
+    "node-core": "^0.1.10"
   },
   "devDependencies": {
     "autod": "^2.9.0",
