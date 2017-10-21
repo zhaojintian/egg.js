@@ -8,15 +8,7 @@ module.exports = app => {
     }
 
     async index () {
-      const where = {id: 1}
-
-      /*
-      this.ctx.body = {
-        count: await this.service.getCount({where}),
-        items: await this.service.getAll({where})
-      }*/
-
-      this.ctx.body = await this.service.getById(1)
+      this.ctx.body = await this.service.find({id: 2})
       /*
       await this.ctx.render('articles', {
         total: data.count,

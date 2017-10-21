@@ -4,29 +4,26 @@ module.exports = app => {
       super(ctx)
 
       this.module = 'articles'
-      this.service = this.getService()
     }
 
     async index () {
-      this.ctx.status = 200
+      await this._index()
+    }
 
-      /*
+    async show () {
+      await this._show()
+    }
 
-      */
-      const {offset = 0, limit = 10, title = ''} = this.ctx.request.query
+    async create () {
+      await this._create()
+    }
 
-      this.ctx.body = {
-        count: await this.service.getCount({
-          offset,
-          limit,
-          where: {
-            title:{
-              ''
-            }
-          }
-        }),
-        items: await this.service.getAll()
-      }
+    async update () {
+      await this._update()
+    }
+
+    async destroy () {
+      await this._destroy()
     }
   }
 }
