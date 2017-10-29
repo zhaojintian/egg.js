@@ -7,23 +7,22 @@ module.exports = app => {
     }
 
     async index () {
-      await this._index()
+      try {
+        this.verify()
+        await this._index()
+      } catch (err) {
+        this.response({
+          status: 401,
+          error: err
+        })
+      }
     }
 
     async show () {
-      await this._show()
-    }
-
-    async create () {
-      await this._create()
-    }
-
-    async update () {
-      await this._update()
-    }
-
-    async destroy () {
-      await this._destroy()
+      try {
+        this.verify()
+        await this._show()
+      } catch (err) {}
     }
   }
 }

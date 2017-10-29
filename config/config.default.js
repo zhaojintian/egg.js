@@ -1,13 +1,21 @@
 module.exports = appInfo => {
-  const config = exports = {}
+  return {
+    middleware: [],
 
-  config.middleware = []
+    security: {
+      csrf: {
+        enable: false
+      }
+    },
 
-  config.security = {
-    csrf: {
-      enable: false
+    jwt: {
+      secret: '123456'
+    },
+
+    md5Salt: '123456',
+
+    i18n: {
+      defaultLocale: 'zh-CN',
     }
   }
-
-  return config
 }
