@@ -24,5 +24,41 @@ module.exports = app => {
         await this._show()
       } catch (err) {}
     }
+
+    async create () {
+      try {
+        this.verify()
+        await this._create()
+      } catch (err) {
+        this.response({
+          status: 401,
+          error: err
+        })
+      }
+    }
+
+    async destroy () {
+      try{
+        this.verify()
+        await this._destroy()
+      } catch (err) {
+        this.response({
+          status: 401,
+          error: err
+        })
+      }
+    }
+
+    async update () {
+      try{
+        this.verify()
+        await this._update()
+      } catch (err) {
+        this.response({
+          status: 401,
+          error: err
+        })
+      }
+    }
   }
 }

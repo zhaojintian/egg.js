@@ -26,8 +26,10 @@ module.exports = app => {
         this.response({
           status: 200,
           data: {
-            id: res[0].id,
-            username,
+            manager: {
+              id: res[0].id,
+              username,
+            },
             token: this.sign({
               userInfo: {
                 username: res[0].username,
@@ -41,7 +43,7 @@ module.exports = app => {
         this.response({
           status: 404,
           error: {
-            code: 'MANAGER/DATA_NOT_FOUND',
+            code: 'MANAGERS/DATA_NOT_FOUND',
             message: '账号或密码错误'
           }
         })
