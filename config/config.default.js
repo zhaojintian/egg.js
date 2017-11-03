@@ -12,8 +12,6 @@ module.exports = appInfo => {
       secret: '123456'
     },
 
-    md5Salt: '123456',
-
     i18n: {
       defaultLocale: 'zh-CN',
     }

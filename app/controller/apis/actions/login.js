@@ -1,3 +1,5 @@
+const {MD5_SALT} = require('../../../util/constant')
+
 module.exports = app => {
   return class extends app.Controller {
     constructor (ctx) {
@@ -9,7 +11,7 @@ module.exports = app => {
 
     /**
      * 登陆
-     * @returns {promise}
+     * @returns {Promise}
      */
     async create () {
       const {username, password} = this.ctx.request.body
@@ -17,7 +19,7 @@ module.exports = app => {
         attributes: ['id', 'username'],
         where: {
           username,
-          password: this.ctx.helper.md5(this.app.config.md5Salt + password)
+          password: this.ctx.helper.md5(MD5_SALT + password)
         }
       })
 

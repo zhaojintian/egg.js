@@ -22,7 +22,12 @@ module.exports = app => {
       try {
         this.verify()
         await this._show()
-      } catch (err) {}
+      } catch (err) {
+        this.response({
+          status: 401,
+          error: err
+        })
+      }
     }
 
     async create () {
@@ -38,7 +43,7 @@ module.exports = app => {
     }
 
     async destroy () {
-      try{
+      try {
         this.verify()
         await this._destroy()
       } catch (err) {
@@ -50,7 +55,7 @@ module.exports = app => {
     }
 
     async update () {
-      try{
+      try {
         this.verify()
         await this._update()
       } catch (err) {
