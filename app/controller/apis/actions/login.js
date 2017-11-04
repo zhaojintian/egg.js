@@ -1,4 +1,4 @@
-const {MD5_SALT} = require('../../../util/constant')
+const {MD5_SALT} = require('../../../../util/constant')
 
 module.exports = app => {
   return class extends app.Controller {

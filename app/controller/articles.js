@@ -1,4 +1,4 @@
-const {PAGE_SIZE} = require('../util/constant')
+const {PAGE_SIZE} = require('../../util/constant')
 
 module.exports = app => {
   return class extends app.Controller {

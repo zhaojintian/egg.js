@@ -10,7 +10,14 @@ const PAGE_SIZE = 10
  */
 const MD5_SALT = '123456'
 
+/**
+ * JSON Web Tokens 密钥
+ * @type {string}
+ */
+const JWT_SECRET = '123456'
+
 module.exports = {
   PAGE_SIZE,
-  MD5_SALT
+  MD5_SALT,
+  JWT_SECRET
 }

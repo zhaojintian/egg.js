@@ -1,3 +1,5 @@
+const {JWT_SECRET} = require('../util/constant')
+
 module.exports = appInfo => {
   return {
     middleware: [],
@@ -9,7 +11,7 @@ module.exports = appInfo => {
     },
 
     jwt: {
-      secret: '123456'
+      secret: JWT_SECRET
     },
 
     i18n: {
