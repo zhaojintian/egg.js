@@ -13,13 +13,13 @@ module.exports = app => {
       const {offset} = this.ctx.helper.formatQuery(this.ctx.request.query)
       const total = await this.service.count()
       const items = await this.service.find({offset, limit: PAGE_SIZE})
-      await this.ctx.render('articles/index', this.$({total, items}), {layout: 'layout/other'})
+      await this.ctx.render('page/articles/index', this.$({total, items}), {layout: 'layout/other'})
     }
 
     async show () {
       try {
         const details = await this.service.find({id: +this.ctx.params.id})
-        await this.ctx.render('articles/show', this.$({details}), {layout: 'layout/other'})
+        await this.ctx.render('page/articles/show', this.$({details}), {layout: 'layout/other'})
       } catch (err) {
         this.ctx.body = err
       }
