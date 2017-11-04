@@ -1,4 +1,4 @@
-const {JWT_SECRET} = require('../util/constant')
+const {JWT_SECRET, DATABASE} = require('../util/constant')
 
 module.exports = appInfo => {
   return {
@@ -15,6 +15,8 @@ module.exports = appInfo => {
     jwt: {
       secret: JWT_SECRET
     },
+
+    sequelize: DATABASE,
 
     i18n: {
       defaultLocale: 'zh-CN',

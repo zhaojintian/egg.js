@@ -9,4 +9,3 @@ run/
 
 .travis.yml
 appveyor.yml
-config/config.local.js

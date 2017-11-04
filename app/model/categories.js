@@ -1,7 +1,7 @@
 module.exports = app => {
   const {STRING, TEXT, INTEGER} = app.Sequelize
 
-  return app.model.define('articles', {
+  return app.model.define('categories', {
     id: {
       type: INTEGER(8),
       primaryKey: true,
