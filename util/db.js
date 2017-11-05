@@ -46,6 +46,11 @@ module.exports = app => {
           type: STRING(200),
           allowNull: false
         },
+        // 副标题
+        SUBTITLE: {
+          type: STRING(200),
+          allowNull: true
+        },
         // 描述
         DESCRIPTION: {
           type: TEXT('tiny'),
