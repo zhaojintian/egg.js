@@ -1,43 +1,25 @@
 module.exports = app => {
-  const {STRING, TEXT, INTEGER} = app.Sequelize
+  const {STRING, INTEGER} = app.Sequelize
+  const db = require('../../util/db')(app)
+  const {TITLE, DESCRIPTION, TELEPHONE, CELLPHONE, EMAIL, ADDRESS, POSTCODE} = db.column
 
   return app.model.define('settings', {
     id: {
-      type: INTEGER(8),
+      type: INTEGER(3),
       primaryKey: true,
       autoIncrement: true,
       allowNull: false
     },
-    title: {
-      type: STRING(100),
-      allowNull: false
-    },
+    title: TITLE,
     keywords: {
       type: STRING(200),
       allowNull: true
     },
-    description: {
-      type: STRING(500),
-    },
-    telephone: {
-      type: STRING(50),
-      allowNull: true
-    },
-    cellphone: {
-      type: STRING(50),
-      allowNull: true
-    },
-    email: {
-      type: STRING(100),
-      allowNull: true
-    },
-    address: {
-      type: STRING(100),
-      allowNull: true
-    },
-    postcode: {
-      type: STRING(50),
-      allowNull: true
-    }
+    description: DESCRIPTION,
+    telephone: TELEPHONE,
+    cellphone: CELLPHONE,
+    email: EMAIL,
+    address: ADDRESS,
+    postcode: POSTCODE
   })
 }

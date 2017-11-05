@@ -1,27 +1,13 @@
 module.exports = app => {
-  const {STRING, TEXT, INTEGER} = app.Sequelize
+  const db = require('../../util/db')(app)
+  const {SHORT_ID, SHORT_RELATED_ID, TITLE, DESCRIPTION, SHORT_ORDER, MODULE} = db.column
 
   return app.model.define('categories', {
-    id: {
-      type: INTEGER(8),
-      primaryKey: true,
-      autoIncrement: true,
-      allowNull: false
-    },
-    parent_id: {
-      type: INTEGER(8),
-      allowNull: true
-    },
-    title: {
-      type: STRING(200),
-      allowNull: false
-    },
-    description: {
-      type: TEXT('tiny'),
-    },
-    order: {
-      type: INTEGER(8),
-      allowNull: true
-    }
+    id: SHORT_ID,
+    parent_id: SHORT_RELATED_ID,
+    title: TITLE,
+    description: DESCRIPTION,
+    order: SHORT_ORDER,
+    module: MODULE
   })
 }
