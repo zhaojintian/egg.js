@@ -1,6 +1,9 @@
 <% for (let i = 0; i < $.items.length; i++) { %>
-id: <%= $.items[i].id %>
-title: <%= $.items[i].title %>
-content: <%= $.items[i].content %>
+<p>
+  id: <%= $.items[i].id %>
+  title: <%= $.items[i].title %>
+  content: <%= $.items[i].content %>
+</p>
 <% } %>
 total: <%= $.total %>
+page: <%- $.page %>
