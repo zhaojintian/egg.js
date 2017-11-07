@@ -10,10 +10,11 @@ module.exports = app => {
     }
 
     async index () {
-      const {offset} = this.ctx.helper.formatQuery(this.ctx.request.query)
+      const p = this.ctx.helper.filterPage(this.ctx.request.query.p)
+      const offset = (p - 1) * PAGE_SIZE
       const total = await this.service.count()
       const items = await this.service.find({offset, limit: PAGE_SIZE})
-      const page = this.ctx.helper.page({url: '/articles', total, limit: PAGE_SIZE, offset})
+      const page = this.ctx.helper.page({url: '/articles', total, limit: PAGE_SIZE, page: p})
 
       await this.ctx.render('page/articles/index', this.$({total, items, page}), {layout: 'layout/other'})
     }
